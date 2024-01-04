@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String  @id
+  name      String
+  email     String  @unique
+  password  String
+  year      String
+  sex       String
+  nick      String  @unique
+  race      String
+  class     String
+  yearPlayer String
+  sexPlayer  String
+  lorePlayer String
+  adm       Boolean? @default(false)
+  createAt  DateTime
+  cards     Usercard[]
+
+  @@map("users")
+}
+
+model Card {
+  id        String  @id
+  name      String
+  imageUrl  String
+  rarity    String
+  users     Usercard[]
+
+  @@map("cards")
+}
+
+model Usercard {
+  id        String  @id
+  userId     String
+  cardId     String
+  user      User  @relation(fields: [userId], references: [id])
+  card      Card  @relation(fields: [cardId], references: [id])
+}
