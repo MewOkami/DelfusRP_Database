@@ -9,7 +9,6 @@ export class User {
   sex: string;
   nick: string;
   race: string;
-  class: string;
   yearPlayer: string;
   sexPlayer: string;
   lorePlayer: string;

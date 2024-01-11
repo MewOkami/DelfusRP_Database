@@ -58,10 +58,6 @@ export class CreateUserDto {
 
   @IsString()
   @IsNotEmpty()
-  class: string;
-
-  @IsString()
-  @IsNotEmpty()
   yearPlayer: string;
 
   @IsString()

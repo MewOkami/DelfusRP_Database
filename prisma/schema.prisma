@@ -19,7 +19,6 @@ model User {
   sex       String
   nick      String  @unique
   race      String
-  class     String
   yearPlayer String
   sexPlayer  String
   lorePlayer String

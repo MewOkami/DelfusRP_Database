@@ -8,7 +8,6 @@ CREATE TABLE "users" (
     "sex" TEXT NOT NULL,
     "nick" TEXT NOT NULL,
     "race" TEXT NOT NULL,
-    "class" TEXT NOT NULL,
     "yearPlayer" TEXT NOT NULL,
     "sexPlayer" TEXT NOT NULL,
     "lorePlayer" TEXT NOT NULL,
